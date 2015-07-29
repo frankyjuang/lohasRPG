@@ -11,6 +11,7 @@
         <link rel="stylesheet" type="text/css" href="css/farm.css" id="css-farm">
         <link rel="stylesheet" type="text/css" href="css/mission.css" id="css-mission">
         <link rel="stylesheet" type="text/css" href="css/collection.css" id="css-collection">
+        <link rel="stylesheet" type="text/css" href="css/home.css" id="css-home">
         <link rel="stylesheet" type="text.css" href="css/jquery.sidr.light.css" id="css-sidr">
         <link rel="stylesheet" type="text/css" href="css/ratchet.css" id="css-ratchet">
         <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
@@ -54,9 +55,10 @@
         <script type="text/javascript">
             var controlCSS = function(){
                 var name = "#css-" + $(document).attr('title');
-                console.log("control css"+ name);
+                console.log("control css "+ name);
                 $('link[rel="stylesheet"]').attr('disabled', 'disabled');
                 $('#css-ratchet').removeAttr('disabled');
+                $('#css-home').removeAttr('disabled');
                 $('#css-sidr').removeAttr('disabled');
                 $(name).removeAttr('disabled');
             }

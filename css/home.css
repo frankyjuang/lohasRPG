@@ -1,0 +1,39 @@
+#home {
+  text-align: center;
+}
+
+.home-logo {
+  content: url("../img/home.png");
+  margin: 0 auto;
+  width: 55%;
+  padding-top: 60px;
+  padding-bottom: 25px;
+}
+
+.home-content {
+  padding: 0 30px;
+}
+
+.home-points {
+  float: right;
+}
+
+.home-exp {
+  float: left;
+}
+
+.home-exp-bar {
+  height: 20px;
+}
+
+.bar-left {
+  background-color: green;
+}
+
+.bar-right {
+  background-color: white;
+}
+
+.home-carbonstep {
+  
+}
