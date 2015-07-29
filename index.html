@@ -54,7 +54,7 @@
         <script type="text/javascript">
             var controlCSS = function(){
                 var name = "#css-" + $(document).attr('title');
-                console.log(name)
+                console.log("control css"+ name);
                 $('link[rel="stylesheet"]').attr('disabled', 'disabled');
                 $('#css-ratchet').removeAttr('disabled');
                 $('#css-sidr').removeAttr('disabled');
@@ -62,30 +62,33 @@
             }
         </script>
         <script>
-            $(document).ready(function() {
-                $('#home-button').sidr({
-                    name: 'home-sidr',
-                    side: 'right',
-                    source: 'home.html',
-                    onOpen: function(){
-                        var wid = $(window).width();
-                        $('.bar').css({
-                            "position": "absolute",
-                            "left": "auto",
-                            "width": wid
-                        });
-                        $('body').css({
-                            "position": "absolute",
-                            "left": "auto",
-                            "width": wid
-                        });
-                    }
-                });
-            });
+            var controlSidr = function(){
+                    console.log("control sidr");
+                    $('#home-button').sidr({
+                        name: 'home-sidr',
+                        side: 'right',
+                        source: 'home.html',
+                        onOpen: function(){
+                            var wid = $(window).width();
+                            $('.bar').css({
+                                "position": "absolute",
+                                "left": "auto",
+                                "width": wid
+                            });
+                            $('body').css({
+                                "position": "absolute",
+                                "left": "auto",
+                                "width": wid
+                            });
+                        }
+                    });
+                };
         </script>
         <script>
             app.bindEvents();
+            $(document).ready(controlSidr);
             window.addEventListener('push', controlCSS);
+            window.addEventListener('push', controlSidr);
         </script>
     </body>
 </html>
