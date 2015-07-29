@@ -1,0 +1,27 @@
+.content {
+  background-color: #EFEFEF;
+}
+
+.card-header > img {
+  vertical-align: middle;
+}
+
+.card-logo {
+  width: 85px;
+  padding: 15px 20px 15px 20px;
+}
+
+.card-content {
+  font-size: 14px;
+  margin: 0 24px 15px 24px;
+}
+
+.card-footer {
+  margin: 0 24px 20px 24px;
+  height: 32px;
+  line-height: 28px;
+}
+
+.two-col-btn {
+  width: 48%;
+}

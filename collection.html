@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height">
+
+        <link rel="stylesheet" type="text/css" href="css/collection.css">
+        <link rel="stylesheet" type="text/css" href="css/ratchet.css">
+        <link rel="stylesheet" type="text.css" href="css/jquery.sidr.light.css">
+        <script type="text/javascript" src="js/ratchet.js"></script>
+        
+        <title>LohasRPG</title>
+    </head>
+
+    <body>
+
+        <header class="bar bar-nav">
+            <a class="mybaricon icon-left-arrow pull-left" href="index.html"></a>
+            <a id="home-button" class="mybaricon icon-home pull-right" href="#home"></a>
+        </header>
+
+        <div class="content">
+            <a href="article.html">
+                <div class="collection-block">
+                    <div class="collection-description">
+                        別傻了 原來沒有O反式脂肪這回事
+                    </div>
+                </div>
+            </a>
+            <a href="article.html">
+                <div class="collection-block">
+                    <div class="collection-description">
+                        別傻了 原來沒有O反式脂肪這回事
+                    </div>
+                </div>
+            </a>
+            <a href="article.html">
+                <div class="collection-block">
+                    <div class="collection-description">
+                        別傻了 原來沒有O反式脂肪這回事
+                    </div>
+                </div>
+            </a>
+            <a href="article.html">
+                <div class="collection-block">
+                    <div class="collection-description">
+                        別傻了 原來沒有O反式脂肪這回事
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+        <script type="text/javascript" src="js/jquery.sidr.min.js"></script>
+        <script type="text/javascript" src="js/fastclick.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('#home-button').sidr({
+                    name: 'home-sidr',
+                    side: 'right',
+                    source: 'home.html',
+                    onOpen: function(){
+                        var wid = $(window).width();
+                        $('.bar').css({
+                            "position": "absolute",
+                            "left": "auto",
+                            "width": wid
+                        });
+                        $('body').css({
+                            "position": "absolute",
+                            "left": "auto",
+                            "width": wid
+                        });
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
+

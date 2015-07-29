@@ -1,0 +1,22 @@
+.post-block {
+  background-image: url("../img/post1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  height: 180px;
+  position: relative;
+}
+
+.post-description {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  background: #fff;
+  opacity: 0.6;
+  text-decoration: none;
+  color: #000;
+  padding-left: 20px;
+}
