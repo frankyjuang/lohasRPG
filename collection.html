@@ -7,10 +7,9 @@
 
         <link rel="stylesheet" type="text/css" href="css/collection.css">
         <link rel="stylesheet" type="text/css" href="css/ratchet.css">
-        <link rel="stylesheet" type="text.css" href="css/jquery.sidr.light.css">
         <script type="text/javascript" src="js/ratchet.js"></script>
         
-        <title>LohasRPG</title>
+        <title>collection</title>
     </head>
 
     <body>
@@ -53,30 +52,7 @@
 
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
-        <script type="text/javascript" src="js/jquery.sidr.min.js"></script>
         <script type="text/javascript" src="js/fastclick.js"></script>
-        <script>
-            $(document).ready(function() {
-                $('#home-button').sidr({
-                    name: 'home-sidr',
-                    side: 'right',
-                    source: 'home.html',
-                    onOpen: function(){
-                        var wid = $(window).width();
-                        $('.bar').css({
-                            "position": "absolute",
-                            "left": "auto",
-                            "width": wid
-                        });
-                        $('body').css({
-                            "position": "absolute",
-                            "left": "auto",
-                            "width": wid
-                        });
-                    }
-                });
-            });
-        </script>
     </body>
 </html>
 

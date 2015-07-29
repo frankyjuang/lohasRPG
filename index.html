@@ -11,6 +11,7 @@
         <link rel="stylesheet" type="text/css" href="css/farm.css" id="css-farm">
         <link rel="stylesheet" type="text/css" href="css/mission.css" id="css-mission">
         <link rel="stylesheet" type="text/css" href="css/collection.css" id="css-collection">
+        <link rel="stylesheet" type="text.css" href="css/jquery.sidr.light.css" id="css-sidr">
         <link rel="stylesheet" type="text/css" href="css/ratchet.css" id="css-ratchet">
         <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
         <script type="text/javascript" src="js/ratchet.js"></script>
@@ -21,7 +22,7 @@
     <body>
 
         <header class="bar bar-nav">
-            <a class="mybaricon icon-home pull-right"></a>
+            <a id="home-button" class="mybaricon icon-home pull-right" href="#home"></a>
         </header>
 
         <div class="content">
@@ -48,6 +49,7 @@
 
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/fastclick.js"></script>
+        <script type="text/javascript" src="js/jquery.sidr.min.js"></script>
         <script type="text/javascript" src="js/app.js"></script>
         <script type="text/javascript">
             var controlCSS = function(){
@@ -55,8 +57,31 @@
                 console.log(name)
                 $('link[rel="stylesheet"]').attr('disabled', 'disabled');
                 $('#css-ratchet').removeAttr('disabled');
+                $('#css-sidr').removeAttr('disabled');
                 $(name).removeAttr('disabled');
             }
+        </script>
+        <script>
+            $(document).ready(function() {
+                $('#home-button').sidr({
+                    name: 'home-sidr',
+                    side: 'right',
+                    source: 'home.html',
+                    onOpen: function(){
+                        var wid = $(window).width();
+                        $('.bar').css({
+                            "position": "absolute",
+                            "left": "auto",
+                            "width": wid
+                        });
+                        $('body').css({
+                            "position": "absolute",
+                            "left": "auto",
+                            "width": wid
+                        });
+                    }
+                });
+            });
         </script>
         <script>
             app.bindEvents();
