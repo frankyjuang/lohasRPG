@@ -16,9 +16,11 @@
 
         <header class="bar bar-nav">
             <script type="text/javascript">
-                $('link[rel="stylesheet"]').attr('disabled', 'disabled');
-                $('#css-ratchet').removeAttr('disabled');
-                $('#css-school').removeAttr('disabled');
+                var controlCSS = function(){
+                    $('link[rel="stylesheet"]').attr('disabled', 'disabled');
+                    $('#css-ratchet').removeAttr('disabled');
+                    $('#css-school').removeAttr('disabled');
+                }
             </script>
 
             <a class="mybaricon icon-left-arrow pull-left" href="index.html"></a>
