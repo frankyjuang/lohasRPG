@@ -15,20 +15,12 @@
         <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
         <script type="text/javascript" src="js/ratchet.js"></script>
         
-        <title>LohasRPG</title>
+        <title>index</title>
     </head>
 
     <body>
 
         <header class="bar bar-nav">
-            <script type="text/javascript">
-                var controlCSS = function(){
-                    $('link[rel="stylesheet"]').attr('disabled', 'disabled');
-                    $('#css-ratchet').removeAttr('disabled');
-                    $('#css-index').removeAttr('disabled');
-                }
-            </script>
-
             <a class="mybaricon icon-home pull-right"></a>
         </header>
 
@@ -57,6 +49,15 @@
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/fastclick.js"></script>
         <script type="text/javascript" src="js/app.js"></script>
+        <script type="text/javascript">
+            var controlCSS = function(){
+                var name = "#css-" + $(document).attr('title');
+                console.log(name)
+                $('link[rel="stylesheet"]').attr('disabled', 'disabled');
+                $('#css-ratchet').removeAttr('disabled');
+                $(name).removeAttr('disabled');
+            }
+        </script>
         <script>
             app.bindEvents();
             window.addEventListener('push', controlCSS);
