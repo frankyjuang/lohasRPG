@@ -1,96 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="nglohas">
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height">
 
         <link rel="stylesheet" type="text/css" href="css/index.css" id="css-index">
+        <link rel="stylesheet" type="text/css" href="css/login.css" id="css-login">
         <link rel="stylesheet" type="text/css" href="css/school.css" id="css-school">
         <link rel="stylesheet" type="text/css" href="css/article.css" id="css-article">
         <link rel="stylesheet" type="text/css" href="css/farm.css" id="css-farm">
         <link rel="stylesheet" type="text/css" href="css/mission.css" id="css-mission">
         <link rel="stylesheet" type="text/css" href="css/collection.css" id="css-collection">
         <link rel="stylesheet" type="text/css" href="css/home.css" id="css-home">
+        <link rel="stylesheet" type="text/css" href="css/woods.css" id="css-woods">
+        <link rel="stylesheet" type="text/css" href="css/loading.css" id="css-loading">
+        <link rel="stylesheet" type="text/css" href="css/loading_school.css" id="css-loading-school">
+        <link rel="stylesheet" type="text/css" href="css/loading_farm.css" id="css-loading-farm">
         <link rel="stylesheet" type="text.css" href="css/jquery.sidr.light.css" id="css-sidr">
         <link rel="stylesheet" type="text/css" href="css/ratchet.css" id="css-ratchet">
+
         <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
-        <script type="text/javascript" src="js/ratchet.js"></script>
+        <script type="text/javascript" src="js/jquery.sidr.min.js"></script>
+        <script type="text/javascript" src="js/angular.min.js"></script>
+        <script type="text/javascript" src="js/angular-route.js"></script>
+        <script type="text/javascript" src="js/fastclick.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+
+        <script type="text/javascript" src="js/ngapp.js"></script>
+        <script type="text/javascript" src="js/HomeController.js"></script>
+        <script type="text/javascript" src="js/WoodsController.js"></script>
+        <script type="text/javascript" src="js/ArticleController.js"></script>
+        <script type="text/javascript" src="js/SchoolController.js"></script>
+        <script type="text/javascript" src="js/FarmController.js"></script>
         
+        <script type="text/javascript" src="js/app.js"></script>
+        <script>
+            app.bindEvents();
+            $(document).ready(controlCSS);
+            $(document).ready(controlSidr);
+            $(document).ready(closeWelcome);
+        </script>
         <title>index</title>
     </head>
 
-    <body>
+    <body ng-controller="HomeController">
 
-        <header class="bar bar-nav">
-            <a id="home-button" class="mybaricon icon-home pull-right" href="#home"></a>
-        </header>
+        <div id="fb-root"></div>
+        <div ng-view style="width:100%; height:100%;"></div>
 
-        <div class="content">
-            <script type="text/javascript">
-            </script>
-            <div id="banner"></div>
-            <div id="village">
-                <div id="topic-market" class="topic">
-                    <a>市集</a>
-                </div>
-                <div id="topic-woods" class="topic">
-                    <a>林場</a>
-                </div>
-                <div style="clear: both;"></div>
-                <div id="topic-school" class="topic">
-                    <a href="school.html">學校</a>
-                </div>
-                <div id="topic-farm" class="topic">
-                    <a href="farm.html">農場</a>
-                </div>
-            </div>
-        </div>
-
-
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/fastclick.js"></script>
-        <script type="text/javascript" src="js/jquery.sidr.min.js"></script>
-        <script type="text/javascript" src="js/app.js"></script>
-        <script type="text/javascript">
-            var controlCSS = function(){
-                var name = "#css-" + $(document).attr('title');
-                console.log("control css "+ name);
-                $('link[rel="stylesheet"]').attr('disabled', 'disabled');
-                $('#css-ratchet').removeAttr('disabled');
-                $('#css-home').removeAttr('disabled');
-                $('#css-sidr').removeAttr('disabled');
-                $(name).removeAttr('disabled');
-            }
-        </script>
-        <script>
-            var controlSidr = function(){
-                    console.log("control sidr");
-                    $('#home-button').sidr({
-                        name: 'home-sidr',
-                        side: 'right',
-                        source: 'home.html',
-                        onOpen: function(){
-                            var wid = $(window).width();
-                            $('.bar').css({
-                                "position": "absolute",
-                                "left": "auto",
-                                "width": wid
-                            });
-                            $('body').css({
-                                "position": "absolute",
-                                "left": "auto",
-                                "width": wid
-                            });
-                        }
-                    });
-                };
-        </script>
-        <script>
-            app.bindEvents();
-            $(document).ready(controlSidr);
-            window.addEventListener('push', controlCSS);
-            window.addEventListener('push', controlSidr);
-        </script>
     </body>
 </html>

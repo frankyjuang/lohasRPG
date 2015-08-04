@@ -1,0 +1,33 @@
+<header class="bar bar-nav">
+    <a class="mybaricon icon-left-arrow pull-left" href="#/index"></a>
+    <a id="home-button" class="mybaricon icon-home pull-right" ng-click="sidebartoggle()"></a>
+</header>
+<div class="content" >
+    <div class="card" ng-repeat="mission_element in mission.missions">    
+        <div class="card-header">
+            <img class="card-logo" src="img/card_leaf.png" >
+            <span>
+                {{mission_element.prefix}}
+            </span>
+            <span>
+                {{mission_element.amount}}
+            </span>
+            <span>
+                {{mission_element.suffix}}
+            </span>
+        </div>
+        <div class="card-content">
+            {{mission_element.description}}
+        </div>
+        <div class="card-footer">
+            <button class="btn two-col-btn pull-left" ng-click="finishmission(mission_element)">
+                <span class="myicon icon-check"></span>
+                完成
+            </button>
+            <button class="btn two-col-btn pull-right" ng-click="closemission(mission_element)">
+                <span class="myicon icon-cross"></span>
+                失敗
+           </button>
+        </div>
+    </div>
+</div>

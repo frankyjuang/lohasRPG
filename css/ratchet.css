@@ -526,9 +526,9 @@ input[type="button"] {
 
 .bar-nav {
   top: 0;
-  background-image: url("../img/bar_bg.png");
+  background-image: url("../img/bar_bg_long.png");
   background-position: center;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -1311,6 +1311,22 @@ select {
 
 .icon-cross {
   content: url("../img/icon_card_cross.png");
+}
+
+.icon-heart-filled {
+  content: url("../img/icon_article_heart_filled.png");
+}
+
+.icon-heart {
+  content: url("../img/icon_article_heart.png");
+}
+
+.icon-home-mission {
+  content: url("../img/icon_home_mission.png");
+}
+
+.icon-home-information {
+  content: url("../img/icon_home_information.png");
 }
 
 .icon-back:before {

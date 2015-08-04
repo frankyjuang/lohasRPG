@@ -1,0 +1,37 @@
+<header class="bar bar-nav">
+    <a class="mybaricon icon-left-arrow pull-left" href="#/index"></a>
+    <a id="home-button" class="mybaricon icon-home pull-right" ng-click="sidebartoggle()"></a>
+</header>
+
+<div class="content" >
+    <div class="card" ng-repeat="farmcard in farm.cards">    
+        <div class="card-header" ng-init="amount=0">
+            <img class="card-logo" src="img/card_leaf.png" >
+            <span>
+                {{farmcard.prefix}}
+            </span>
+            <img class="card-operator" src="img/card_minus.png" ng-click="minusamount(farmcard);amount > 0 ? amount = amount -1 : amount =amount">
+            <span>
+                {{amount}}
+            </span>
+            <img class="card-operator" src="img/card_plus.png" ng-click="plusamount(farmcard); amount=amount+1">
+            <span>
+                {{farmcard.suffix}}
+            </span>
+        </div>
+        <div class="card-content">
+            {{farmcard.description}}
+        </div>
+        <div class="card-footer">
+            <button class="btn" ng-click="missionadd(farmcard)">
+                <span class="myicon icon-add"></span>
+                加入任務
+            </button>
+            <span class="card-result">
+                總共減少了{{ amount * farmcard.effect / farmcard.base | number:2 }} 公斤的碳排放
+            </span>
+        </div>
+    </div>
+</div>
+
+<div id="loading-farm" class="loading-page"></div>

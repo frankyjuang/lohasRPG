@@ -1,0 +1,11 @@
+.loading-page {
+  background: url('../img/loading_spin.gif') 50% 50% no-repeat rgb(249,249,249);
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  padding-top: 50px;
+  display: none;
+}

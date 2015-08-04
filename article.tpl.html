@@ -1,0 +1,27 @@
+<header class="bar bar-nav">
+    <a class="mybaricon icon-left-arrow pull-left" href="#/school"></a>
+    <a class="mybaricon icon-home pull-right" ng-click="sidebartoggle()"></a>
+</header>
+
+<div class="content">
+    <div class="article-header" style="background-image: url('{{article.article_content.image}}');">
+    </div>
+    <div class="content-padded"> 
+        {{article.article_content.header}}
+        <br />
+        <br />
+        <div class="article-content" ng-bind-html="renderHtml(paragraph)"></div>
+        
+        <!--
+        <button class="btn">
+            <span class="myicon icon-heart"></span>
+        </button>
+        <button class="btn">
+            分享
+        </button>
+        <button class="btn">
+            收藏
+        </button>
+        -->
+    </div>
+</div>

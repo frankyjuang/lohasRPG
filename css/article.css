@@ -22,3 +22,6 @@
   font-size: 20px;
 }
 
+.article-content > img {
+  width: 100%;
+}

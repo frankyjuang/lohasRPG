@@ -2,6 +2,10 @@
   background-color: #EFEFEF;
 }
 
+.card-header {
+  font-size: 14px;
+}
+
 .card-header > img {
   vertical-align: middle;
 }
@@ -17,7 +21,7 @@
 }
 
 .card-content {
-  font-size: 14px;
+  font-size: 13px;
   margin: 0 24px 15px 24px;
 }
 
